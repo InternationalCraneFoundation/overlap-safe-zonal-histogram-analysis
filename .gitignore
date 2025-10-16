@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+
+# UV (modern Python package manager)
+.uv/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Ruff cache
+.ruff_cache/
+
+# Geospatial data files (common large file types)
+*.tif
+*.tiff
+*.shp
+*.shx
+*.dbf
+*.prj
+*.sbn
+*.sbx
+*.cpg
+*.qix
+*.gpkg
+*.gdb/
+
+# Raster attribute tables
+*.tif.vat.dbf
+*.tif.aux.xml
+*.tif.ovr
+
+# Output files
+results/
+output/
+temp/
+tmp/
+
+# OS generated files
+.DS_Store
+Thumbs.db
