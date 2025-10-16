@@ -2,77 +2,6 @@
 
 A comprehensive Python tool for computing zonal histograms from classified rasters with complete class coverage. This tool ensures accurate per-zone statistics by processing each zone individually and including all possible habitat classes in the output.
 
-## Current Repository Structure
-
-The repository contains a clean, focused set of files:
-
-```
-README.md                          ← This documentation
-pyproject.toml                     ← Modern Python project configuration (dependencies, metadata)
-requirements.txt                   ← Legacy pip dependencies (for compatibility)
-zonal_histogram_complete.py        ← ⭐ MAIN TOOL - Use this one!
-ZonalHistogram.csv                 ← Example output from analysis
-.venv/                             ← Virtual environment directory
-```
-
-**For new users: Use `uv sync` for automatic setup, or use `zonal_histogram_complete.py` with manual configuration.**
-
-## Testing
-
-This project includes a comprehensive test suite to ensure reliability and accuracy.
-
-### **Running Tests**
-
-```powershell
-# Install ALL dependencies including development/testing tools
-uv sync --all-extras --dev
-
-# Or install dev dependencies separately if already synced
-uv pip install pytest pytest-cov pytest-mock black ruff coverage
-
-# Run all tests
-python run_tests.py
-
-# Run specific test types
-python run_tests.py --unit              # Unit tests only
-python run_tests.py --integration       # Integration tests only
-python run_tests.py --coverage          # Tests with coverage report
-
-# Manual pytest commands (after installing pytest)
-python -m pytest                        # All tests
-python -m pytest -v                     # Verbose output
-python -m pytest -m unit               # Unit tests only
-python -m pytest --cov=. --cov-report=html  # Coverage report
-```
-
-### **Test Structure**
-
-- **Unit Tests**: Test individual functions and classes
-- **Integration Tests**: Test complete workflows
-- **Geospatial Tests**: Test coordinate system handling and data processing
-- **Mock Tests**: Test with simulated data to avoid large file dependencies
-
-### **Test Coverage Areas**
-
-- ✅ Configuration management (`HistogramConfig`)
-- ✅ File I/O operations (raster/shapefile loading)
-- ✅ Coordinate system validation and reprojection
-- ✅ Individual zone processing algorithm
-- ✅ **Overlapping zone handling** (key advantage validation)
-- ✅ Raster attribute table handling
-- ✅ Output generation and formatting
-- ✅ Error handling and edge cases
-
-### **Current Test Status**
-
-🎉 **All tests passing!** The test suite includes:
-- **12 total tests** (11 unit + 1 integration)
-- **Overlapping zone validation**: Tests specifically verify correct handling of overlapping buffer zones
-- **60% code coverage** with detailed HTML reports
-- **Clean code quality** (100% Ruff linting + Black formatting compliance)
-- **Comprehensive mocking** for geospatial operations
-- **Cross-platform compatibility** with modern Python testing tools
-
 ## Tool Purpose
 
 This repository contains the **zonal histogram analysis tool** - a Python script that computes accurate zonal histograms from classified rasters with complete class coverage.
@@ -99,6 +28,21 @@ Many ecological and environmental analyses use **overlapping buffer zones**:
 **Problem with bulk processing**: Most GIS tools (including ArcGIS Pro's Zonal Histogram) process all zones simultaneously, causing overlap artifacts and incorrect pixel counts.
 
 **Our solution**: Individual zone processing ensures each zone gets accurate, independent pixel counts regardless of overlaps with other zones.
+
+## Current Repository Structure
+
+The repository contains a clean, focused set of files:
+
+```
+README.md                          ← This documentation
+pyproject.toml                     ← Modern Python project configuration (dependencies, metadata)
+requirements.txt                   ← Legacy pip dependencies (for compatibility)
+zonal_histogram_complete.py        ← ⭐ MAIN TOOL - Use this one!
+ZonalHistogram.csv                 ← Example output from analysis
+.venv/                             ← Virtual environment directory
+```
+
+**For new users: Use `uv sync` for automatic setup, or use `zonal_histogram_complete.py` with manual configuration.**
 
 ## Quick Start
 
@@ -316,6 +260,62 @@ This ensures:
 - **Processing Time**: ~30-60 seconds for 197 zones with a 30m resolution raster
 - **Memory Usage**: Moderate (loads one zone at a time)
 - **Accuracy**: Pixel counts are exact and match ArcGIS Pro results
+
+## Testing
+
+This project includes a comprehensive test suite to ensure reliability and accuracy.
+
+### **Running Tests**
+
+```powershell
+# Install ALL dependencies including development/testing tools
+uv sync --all-extras --dev
+
+# Or install dev dependencies separately if already synced
+uv pip install pytest pytest-cov pytest-mock black ruff coverage
+
+# Run all tests
+python run_tests.py
+
+# Run specific test types
+python run_tests.py --unit              # Unit tests only
+python run_tests.py --integration       # Integration tests only
+python run_tests.py --coverage          # Tests with coverage report
+
+# Manual pytest commands (after installing pytest)
+python -m pytest                        # All tests
+python -m pytest -v                     # Verbose output
+python -m pytest -m unit               # Unit tests only
+python -m pytest --cov=. --cov-report=html  # Coverage report
+```
+
+### **Test Structure**
+
+- **Unit Tests**: Test individual functions and classes
+- **Integration Tests**: Test complete workflows
+- **Geospatial Tests**: Test coordinate system handling and data processing
+- **Mock Tests**: Test with simulated data to avoid large file dependencies
+
+### **Test Coverage Areas**
+
+- ✅ Configuration management (`HistogramConfig`)
+- ✅ File I/O operations (raster/shapefile loading)
+- ✅ Coordinate system validation and reprojection
+- ✅ Individual zone processing algorithm
+- ✅ **Overlapping zone handling** (key advantage validation)
+- ✅ Raster attribute table handling
+- ✅ Output generation and formatting
+- ✅ Error handling and edge cases
+
+### **Current Test Status**
+
+🎉 **All tests passing!** The test suite includes:
+- **12 total tests** (11 unit + 1 integration)
+- **Overlapping zone validation**: Tests specifically verify correct handling of overlapping buffer zones
+- **60% code coverage** with detailed HTML reports
+- **Clean code quality** (100% Ruff linting + Black formatting compliance)
+- **Comprehensive mocking** for geospatial operations
+- **Cross-platform compatibility** with modern Python testing tools
 
 ## Troubleshooting
 
