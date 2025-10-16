@@ -7,6 +7,8 @@ A comprehensive Python tool for computing zonal histograms from classified raste
 This repository contains the **zonal histogram analysis tool** - a Python script that computes accurate zonal histograms from classified rasters with complete class coverage.
 
 **Key Achievement**: This tool solves the overlap artifacts problem found in many GIS zonal analysis tools by processing each zone individually rather than using bulk processing methods.
+<img width="1559" height="1180" alt="output" src="https://github.com/user-attachments/assets/6e190a55-cc16-4a4c-9747-555e157c0808" />
+
 
 ## Overview
 
