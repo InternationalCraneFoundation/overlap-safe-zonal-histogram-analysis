@@ -25,6 +25,9 @@ USAGE:
 - Run: python zonal_histogram_complete.py
 - Or use command line arguments (see --help)
 
+Example: 
+uv run .\zonal_histogram_complete.py --raster "\\icfdc1.savingcranes.local\geodata\FED_Data\GIS_Projects\BaseData\NorthAmerica\Wisconsin\WiscLand2\level2\wiscland2_level2.tif" --zones "C:\Users\Dorn\Downloads\Buffer2025\Buffer2025.shp" --zone-field "ChickID" --rat-field "cls_desc_2" --output "zonal_histogram_results.csv"
+
 AUTHORS: - Dorn Moore, International Crane Foundation Conservation Technology Team
 EMAIL: dorn@savingcranes.org
 DATE: October 2025
