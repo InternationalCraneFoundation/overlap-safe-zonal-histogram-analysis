@@ -1,23 +1,42 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-message: "If you use this software, please cite it using the metadata from this file."
-title: "Overlap-Safe Zonal Histogram Analysis Tool"
+title: Overlap-Safe Zonal Histogram Analysis Tool
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
 version: 1.0.0
 date-released: 2025-10-01
 authors:
   - given-names: Dorn
     family-names: Moore
-    affiliation: "International Crane Foundation"
     email: dorn@savingcranes.org
-  - name: "International Crane Foundation"
-    type: organization
-repository-code: "https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis"
-url: "https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis"
+    affiliation: International Crane Foundation
+    orcid: 'https://orcid.org/0009-0004-9220-9748'
+  - name: International Crane Foundation
+    address: E11376 Shady Lane Rd
+    city: Baraboo
+    country: US
+    post-code: '53913'
+    date-start: '1973-01-01'
+    tel: '+16083569462'
+    website: 'https://savingcranes.org'
+repository-code: >-
+  https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis
+abstract: >-
+  A Python tool for computing zonal histograms from
+  classified rasters with complete class coverage. This tool
+  processes each zone individually to correctly handle
+  overlapping buffer zones, preventing artifacts that occur
+  with bulk processing methods used by many GIS tools.
 keywords:
-  - "zonal histogram"
-  - "raster analysis"
-  - "geospatial analysis"
-  - "overlapping buffers"
-  - "habitat analysis"
-  - "Python"
-  - "GIS"
-abstract: "A Python tool for computing zonal histograms from classified rasters with complete class coverage. This tool processes each zone individually to correctly handle overlapping buffer zones, preventing artifacts that occur with bulk processing methods used by many GIS tools."
+  - zonal histogram
+  - raster analysis
+  - geospatial analysis
+  - overlapping buffers
+  - habitat analysis
+  - Python
+  - GIS
+license: 0BSD
