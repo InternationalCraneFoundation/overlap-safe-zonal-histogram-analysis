@@ -35,7 +35,9 @@
      ## Citation
      If you use this software in your research, please cite it using the CITATION.cff file or:
      
-     Moore, D., & International Crane Foundation. (2025). Overlap-Safe Zonal Histogram Analysis Tool (Version 1.0.0) [Computer software]. GitHub. https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis
+     International Crane Foundation. (2025). Overlap-Safe Zonal Histogram Analysis Tool (Version 1.0.0) [Computer software]. GitHub. https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis
+     
+     *Note: The individual developer (D. Moore) is credited in the CITATION.cff file and will appear in Zenodo metadata, but for APA-style citations, the organization is typically listed as the author for organizational software.*
      ```
    - **Target**: Select `main` branch
 5. **Click "Publish release"**
@@ -100,7 +102,8 @@ If automatic integration doesn't work:
    - **Version**: 1.0.0
    - **Publication date**: October 2025
    - **Creators**: 
-     - Moore, Dorn (International Crane Foundation)
+     - International Crane Foundation (primary/organization)
+     - Moore, Dorn (contributor - will appear in author list)
    - **Description**: Use the abstract from README.md
    - **Keywords**: zonal histogram, raster analysis, geospatial analysis, overlapping buffers, habitat analysis, Python, GIS
    - **License**: Specify your license (if you have one)
@@ -140,15 +143,38 @@ After you receive the Zenodo DOI:
 
 ## Citation Formats (After Zenodo DOI is Available)
 
-### APA Style
+### APA Style (Standard Format)
 ```
-Moore, D., & International Crane Foundation. (2025). Overlap-Safe Zonal Histogram Analysis Tool (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+International Crane Foundation. (2025). Overlap-Safe Zonal Histogram Analysis Tool (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
 ```
+
+**Alternative (if you want to credit the individual developer):**
+```
+Moore, D. (International Crane Foundation). (2025). Overlap-Safe Zonal Histogram Analysis Tool (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+```
+
+*Note: The standard practice for organizational software is to use the organization as the author. The individual developer is credited in the CITATION.cff metadata and will appear in Zenodo's author list.*
 
 ### BibTeX
 ```bibtex
+@software{icf_zonal_histogram_2025,
+  author = {{International Crane Foundation}},
+  title = {Overlap-Safe Zonal Histogram Analysis Tool},
+  version = {1.0.0},
+  month = oct,
+  year = {2025},
+  publisher = {Zenodo},
+  doi = {10.5281/zenodo.XXXXXXX},
+  url = {https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis},
+  note = {Developed by Dorn Moore}
+}
+```
+
+**Alternative (with individual developer):**
+```bibtex
 @software{moore_zonal_histogram_2025,
-  author = {Moore, Dorn and {International Crane Foundation}},
+  author = {Moore, Dorn},
+  organization = {International Crane Foundation},
   title = {Overlap-Safe Zonal Histogram Analysis Tool},
   version = {1.0.0},
   month = oct,
@@ -163,11 +189,11 @@ Moore, D., & International Crane Foundation. (2025). Overlap-Safe Zonal Histogra
 ```
 TY  - COMP
 TI  - Overlap-Safe Zonal Histogram Analysis Tool
-AU  - Moore, Dorn
 AU  - International Crane Foundation
 PY  - 2025/10/01
 VL  - 1.0.0
 DO  - 10.5281/zenodo.XXXXXXX
 UR  - https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis
+N1  - Developed by Dorn Moore
 ER  -
 ```

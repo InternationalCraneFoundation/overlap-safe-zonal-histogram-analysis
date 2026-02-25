@@ -1,10 +1,10 @@
-# Zonal Histogram Analysis Tool
+# Overlap-Safe Zonal Histogram Analysis Tool
 
-A comprehensive Python tool for computing zonal histograms from classified rasters with complete class coverage. This tool ensures accurate per-zone statistics by processing each zone individually and including all possible habitat classes in the output.
+A comprehensive Python tool for computing zonal histograms from classified rasters with complete class coverage. This tool ensures accurate per-zone statistics by processing each zone individually and including all possible habitat classes in the output. **Key feature**: Designed to correctly handle overlapping buffer zones, preventing artifacts that occur with bulk processing methods.
 
 ## Tool Purpose
 
-This repository contains the **zonal histogram analysis tool** - a Python script that computes accurate zonal histograms from classified rasters with complete class coverage.
+This repository contains the **Overlap-Safe Zonal Histogram Analysis Tool** - a Python script that computes accurate zonal histograms from classified rasters with complete class coverage.
 
 **Key Achievement**: This tool solves the overlap artifacts problem found in many GIS zonal analysis tools by processing each zone individually rather than using bulk processing methods.
 <img width="780" height="590" alt="output" src="https://github.com/user-attachments/assets/6e190a55-cc16-4a4c-9747-555e157c0808" />
@@ -37,11 +37,13 @@ The repository contains a clean, focused set of files:
 
 ```
 README.md                          ← This documentation
+CITATION.cff                       ← Citation metadata for academic use
+RELEASE_INSTRUCTIONS.md            ← Guide for creating releases and Zenodo archiving
 pyproject.toml                     ← Modern Python project configuration (dependencies, metadata)
 requirements.txt                   ← Legacy pip dependencies (for compatibility)
 zonal_histogram_complete.py        ← ⭐ MAIN TOOL - Use this one!
-ZonalHistogram.csv                 ← Example output from analysis
-.venv/                             ← Virtual environment directory
+test_zonal_histogram.py            ← Test suite
+.venv/                             ← Virtual environment directory (created during setup)
 ```
 
 **For new users: Use `uv sync` for automatic setup, or use `zonal_histogram_complete.py` with manual configuration.**
@@ -378,6 +380,22 @@ These scripts were developed with assistance from AI tools, including Claude Son
 ## License
 
 This tool was developed for ecological and environmental analysis applications. Feel free to adapt for your specific needs.
+
+## Citation
+
+If you use this software in your research, please cite it as:
+
+**APA Style:**
+```
+International Crane Foundation. (2025). Overlap-Safe Zonal Histogram Analysis Tool (Version 1.0.0) [Computer software]. GitHub. https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis
+```
+
+**With Zenodo DOI (after archiving):**
+```
+International Crane Foundation. (2025). Overlap-Safe Zonal Histogram Analysis Tool (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+```
+
+The repository includes a `CITATION.cff` file that provides citation metadata in multiple formats. Citation management tools (Zotero, Mendeley, etc.) can automatically import this information.
 
 ## Support
 
