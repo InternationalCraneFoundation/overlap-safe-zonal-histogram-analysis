@@ -2,7 +2,6 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata from this file."
 title: "Overlap-Safe Zonal Histogram Analysis Tool"
 version: 1.0.0
-doi: 10.5281/zenodo.XXXXXXX
 date-released: 2025-10-01
 authors:
   - given-names: Dorn
@@ -13,7 +12,6 @@ authors:
     type: organization
 repository-code: "https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis"
 url: "https://github.com/InternationalCraneFoundation/overlap-safe-zonal-histogram-analysis"
-license: "See LICENSE file"
 keywords:
   - "zonal histogram"
   - "raster analysis"
