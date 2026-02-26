@@ -1,14 +1,9 @@
-# This CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to generate yours today!
-
 cff-version: 1.2.0
 title: Overlap-Safe Zonal Histogram Analysis Tool
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
 type: software
-version: 1.0.0
-date-released: 2025-10-01
 authors:
   - given-names: Dorn
     family-names: Moore
@@ -40,3 +35,5 @@ keywords:
   - Python
   - GIS
 license: MIT
+version: 1.0.0
+date-released: '2025-10-01'
