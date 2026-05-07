@@ -112,7 +112,7 @@ class HistogramConfig:
         - output_csv: Where you want to save results
         """
         return cls(
-            raster_path=Path(r"C:\Users\SundasRehman\OneDrive - INTERNATIONAL CRANE FOUNDATION\Documents\_Projects\zonalHistogram Script\wiscland2_landcover\wiscland2\wiscland2_dataset\level1\level1\wiscland2_level1.tif"),
+            raster_path=Path(r"C:\Users\SundasRehman\OneDrive - INTERNATIONAL CRANE FOUNDATION\Documents\_Projects\zonalHistogram Script\landcover.tif"),
             zones_path=Path(r"C:\Users\SundasRehman\OneDrive - INTERNATIONAL CRANE FOUNDATION\Documents\_Projects\zonalHistogram Script\buffers.shp"),
             zone_field="bird_date",  # ← Change to your zone ID field
             rat_field="cls_desc_1",  # ← Change to your class description field
@@ -209,8 +209,12 @@ def load_zones(
     # CRITICAL: Check coordinate systems - they must match for accurate results
     LOGGER.info("Zone CRS: %s", zones.crs)
     LOGGER.info("Target Raster CRS: %s", target_crs)
+    LOGGER.info("Zone CRS WKT: %s", zones.crs.to_wkt())
+    LOGGER.info("Raster CRS WKT: %s", target_crs.to_wkt())
+    LOGGER.info("Zone EPSG: %s", zones.crs.to_epsg())
+    LOGGER.info("Raster EPSG: %s", target_crs.to_epsg())
 
-    if zones.crs != target_crs:
+    if zones.crs.to_epsg() != target_crs.to_epsg():
         LOGGER.warning("=" * 80)
         LOGGER.warning("COORDINATE SYSTEM MISMATCH DETECTED!")
         LOGGER.warning("Zone CRS: %s", zones.crs)
